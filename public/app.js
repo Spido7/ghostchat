@@ -1,4 +1,4 @@
-const WORKER_URL = window.location.origin;
+const WORKER_URL = "https://ghost-chat.spidozx.workers.dev";
 
 // --- IDENTITY SYSTEM ---
 const adjectives = ["Cyber", "Neon", "Ghost", "Crypto", "Silent", "Quantum", "Shadow"];
