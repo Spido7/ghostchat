@@ -130,12 +130,32 @@ function setupConnection(conn) {
         else if(d.type === 'system') addSystemMessage(d.text);
     });
 
-    conn.on('close', () => { 
-        connections = connections.filter(c => c !== conn); 
-        addSystemMessage("User left.");
+    conn.on('close', () => {
+        addSystemMessage("User disconnected.");
         
-        // Optional: If in 1:1 mode and user leaves, maybe ask to search again?
-        // For now, we just leave them alone.
+        // NEW: "Search Again" Button Logic
+        const container = document.createElement('div');
+        container.style.textAlign = 'center';
+        container.style.marginTop = '15px';
+        
+        // Create a button that triggers the existing startRandomChat() function
+        const btn = document.createElement('button');
+        btn.className = 'btn-pink'; // Re-use your pink neon style
+        btn.innerText = "🎲 Find New Stranger";
+        btn.style.width = "auto";
+        btn.style.padding = "10px 20px";
+        
+        // When clicked, clear chat and search again
+        btn.onclick = () => {
+            chatFeed.innerHTML = ''; // Clean previous conversation
+            startRandomChat();       // Restart the search logic
+        };
+        
+        container.appendChild(btn);
+        chatFeed.appendChild(container);
+        
+        // Auto-scroll to show the button
+        chatFeed.scrollTop = chatFeed.scrollHeight;
     });
     
     conn.on('error', () => {
