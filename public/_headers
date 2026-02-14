@@ -1,0 +1,15 @@
+/*
+  # 1. Ad Optimization (Crucial for Revenue)
+  # This ensures Adcash knows exactly where the traffic comes from.
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # 2. Security (Prevents click-jacking)
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+
+  # 3. Connectivity (Allows your Worker to talk to this page)
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+
+  # 4. Browser Cache (Updates your site faster for users)
+  Cache-Control: public, max-age=3600
