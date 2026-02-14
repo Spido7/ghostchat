@@ -13,3 +13,5 @@
 
   # 4. Browser Cache (Updates your site faster for users)
   Cache-Control: public, max-age=3600
+
+  Permissions-Policy: browsing-topics=()
