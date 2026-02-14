@@ -1,10 +1,10 @@
-# 👻 GhostChat // Serverless P2P Mesh
+# 👻 NullChat // Serverless P2P Mesh
 
 ![Status](https://img.shields.io/badge/Status-Live-neon)
 ![Stack](https://img.shields.io/badge/Stack-Cloudflare%20Workers%20%2B%20WebRTC-cyan)
 ![Privacy](https://img.shields.io/badge/Privacy-End--to--End%20Encrypted-ff0099)
 
-**GhostChat** is a decentralized, serverless communication suite designed for ephemeral, privacy-focused interaction. Built on **Cloudflare Workers** and **PeerJS**, it establishes direct P2P connections between users without storing messages on a central server.
+**NullChat** is a decentralized, serverless communication suite designed for ephemeral, privacy-focused interaction. Built on **Cloudflare Workers** and **PeerJS**, it establishes direct P2P connections between users without storing messages on a central server.
 
 The interface features a responsive **Cyberpunk/Neon Glassmorphism** design optimized for mobile and desktop.
 
@@ -46,5 +46,5 @@ The interface features a responsive **Cyberpunk/Neon Glassmorphism** design opti
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/Spido7/GhostChat.git](https://github.com/Spido7/GhostChat.git)
-cd GhostChat
+git clone [https://github.com/Spido7/NullChat.git](https://github.com/Spido7/NullChat.git)
+cd NullChat
