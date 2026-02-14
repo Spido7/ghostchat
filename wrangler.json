@@ -1,0 +1,15 @@
+{
+  "name": "ghost-chat",
+  "main": "src/index.js",
+  "compatibility_date": "2024-01-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "CHAT_QUEUE",
+      "id": "5bf24d5dda454e0498a40b97ca2ce8ac"
+    }
+  ]
+}

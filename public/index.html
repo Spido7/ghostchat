@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GhostChat | Anonymous P2P Mesh</title>
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-grid">
+        
+
+        
+
+        <div class="area-center">
+            
+           
+
+            <div id="home-screen">
+                <h1 class="glitch-text">GHOSTCHAT</h1>
+                <div class="menu-card">
+                    <button onclick="joinPublicLounge()" class="btn-cyan">🌍 Public Lounge</button>
+                    <button onclick="startRandomChat()" class="btn-pink">🎲 Random 1:1</button>
+                    <div class="group-section">
+                        <input type="number" id="group-key-input" placeholder="6-Digit Key">
+                        <button onclick="joinGroup()" class="btn-yellow">🔑 Join Group</button>
+                        <button onclick="createGroup()" class="btn-ghost">Create New Room</button>
+                    </div>
+                    <button onclick="openModal('donate-modal')" class="btn-support">❤ Support (Oxapay)</button>
+                    <div class="legal-footer"><a href="legal.html" class="legal-link">Privacy & Terms</a></div>
+                </div>
+            </div>
+
+            <div id="chat-interface">
+                <header>
+                    <span id="room-status" style="font-weight:bold;">Connecting...</span>
+                    <div style="display:flex; gap:10px;">
+                        <div id="premium-tools" style="display:none; gap:8px;">
+                            <button onclick="toggleVoice()" id="voice-btn" style="padding:8px 12px; font-size:0.8rem; background:#222; color:#fff; border:1px solid #444;">🎤 Voice</button>
+                            <button onclick="document.getElementById('file-input').click()" style="padding:8px 12px; font-size:0.8rem; background:#222; color:#fff; border:1px solid #444;">📎</button>
+                        </div>
+                        <button onclick="leaveChat()" style="background:#ff4444; color:#fff; border:none; padding:8px 15px; border-radius:8px;">Exit</button>
+                    </div>
+                </header>
+                <div id="chat-feed"></div>
+                <div class="input-area">
+                    <input type="text" id="msg-input" placeholder="Type a message..." onkeypress="handleEnter(event)" style="flex:1;">
+                    <button onclick="sendMessage()" class="btn-cyan" style="width:50px;">➤</button>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div id="donate-modal" class="modal">
+        <div class="menu-card" style="text-align:center; position:relative;">
+            <span class="close" onclick="closeModal('donate-modal')">&times;</span>
+            <h2>Support Anonymity 🛡️</h2>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:20px;">
+                <button onclick="processDonation(1)" class="btn-ghost">$1</button>
+                <button onclick="processDonation(5)" class="btn-ghost">$5</button>
+                <button onclick="processDonation(10)" class="btn-ghost">$10</button>
+                <button onclick="processDonation('custom')" class="btn-ghost">Custom</button>
+            </div>
+            <p id="donation-status" style="margin-top:15px; color:#888; font-size:0.8rem;"></p>
+        </div>
+    </div>
+
+    <input type="file" id="file-input" hidden onchange="sendFile(this.files[0])">
+    <script src="app.js"></script>
+    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+    <script type="text/javascript">
+    aclib.runAutoTag({
+        zoneId: 'maydrlk57h',
+    });
+    </script>
+    
+
+</body>
+</html>
